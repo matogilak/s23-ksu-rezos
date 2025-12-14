@@ -207,12 +207,11 @@ diff --git a/KernelSU/kernel/kernel_umount.c b/KernelSU/kernel/kernel_umount.c
 index a58d2f75..f6fc3cc8 100644
 --- a/KernelSU/kernel/kernel_umount.c
 +++ b/KernelSU/kernel/kernel_umount.c
-@@@ -110,6 +110,8 @@
+@@ -110,6 +110,7 @@
          return 0;
      }
  
 +#ifndef CONFIG_KSU_SUSFS
-+
      // There are 5 scenarios:
      // 1. Normal app: zygote -> appuid
      // 2. Isolated process forked from zygote: zygote -> isolated_process
